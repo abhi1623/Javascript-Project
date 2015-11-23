@@ -2,97 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Plot-A</title>
-  <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
-  <style media="screen">
-    .bar {
-        fill: steelblue;
-    }
-
-    .axis text {
-        font: 12px sans-serif;
-    }
-
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: #000;
-        shape-rendering: crispEdges;
-    }
-
-    .x.axis path {
-        display: none;
-    }
-  </style>
+  <title>Welcome</title>
 </head>
-<svg class="chart"></svg>
-
-<script>
-
-  var margin = {top:20, right:30, bottom:50, left:100};
-
-  var width = 1300 - margin.left - margin.right;
-
-  var height = 600 - margin.top - margin.bottom;
-
-  var x = d3.scale.ordinal()
-      .rangeRoundBands([0,width], 0.1);
-
-  var y = d3.scale.linear()
-      .range([height,0]);
-
-  var xAxis = d3.svg.axis()
-      .scale(x)
-      .orient("bottom");
-
-  var yAxis = d3.svg.axis()
-      .scale(y)
-      .orient("left");
-      //.ticks(10, "s");
-
-  var chart = d3.select(".chart")
-      .attr("height", height + margin.top + margin.bottom)
-      .attr("width", width + margin.left + margin.right)
-    .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top +")");
-
-  d3.json("plotA.json", function(json) {
-    var data = json.age_dist;
-
-    x.domain(data.map(function(d) {return d.age_group;}));
-
-    y.domain([0,d3.max(data, function(d){ return d.litpop;})]);
-
-    chart.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis)
-      .append("text")
-        //.attr("transform", "rotate(-60)")
-        .attr("x", width/2)
-        .attr("dy", "2.5em")
-        .style("text-anchor", "middle")
-        .text("age-group");
-
-    chart.append("g")
-        .attr("class", "y axis")
-        .call(yAxis)
-      .append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("y", 6)
-        .attr("dy", "0.71em")
-        .style("text-anchor", "end")
-        .text("literary - population");
-
-    chart.selectAll(".bar")
-        .data(data)
-      .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", function(d) { return x(d.age_group); })
-        .attr("y", function(d) { return y(d.litpop); })
-        .attr("height", function(d) { return height - y(d.litpop); })
-        .attr("width", x.rangeBand());
-
-  });
-</script>
+<body>
+  <h1>India Census 2011 v2 - Educational Level Age,Sex - more than 7 yrs - State wise.</h1>
+  <h3>Age-wise population distribution in terms of literate population</h1>
+  <a href="index1.html">Click here</a>
+  <h3>Graduate Population of India - State-wise & Gender-wise.</h1>
+  <a href="index2.html">Click here</a>
+  <h3>Education Category wise - all India data combined together</h1>
+  <a href="index3.html">Click here</a>
+</body>
 </html>
