@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plot-C</title>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+  <style media="screen">
+    .bar {
+        fill: steelblue;
+    }
+
+    .axis text {
+        font: 12px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+        display: none;
+    }
+  </style>
+</head>
+<svg class="chart"></svg>
+
+<script>
+
+  var margin = {top:20, right:30, bottom:50, left:100};
+
+  var width = 1300 - margin.left - margin.right;
+
+  var height = 600 - margin.top - margin.bottom;
+
+  var x = d3.scale.ordinal()
+      .rangeRoundBands([0,width], 0.1);
+
+  var y = d3.scale.linear()
+      .range([height,0]);
+
+  var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom");
+
+  var yAxis = d3.svg.axis()
+      .scale(y)
+      .orient("left");
+      //.ticks(10, "s");
+
+  var chart = d3.select(".chart")
+      .attr("height", height + margin.top + margin.bottom)
+      .attr("width", width + margin.left + margin.right)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top +")");
+
+  d3.json("plotC.json", function(json) {
+    var data = json.Education;
+
+    x.domain(data.map(function(d) {return d.education;}));
+
+    y.domain([0,d3.max(data, function(d){ return d.population;})]);
+
+    chart.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+      
+
+    chart.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "0.71em")
+        .style("text-anchor", "end")
+        .text("population");
+
+    chart.selectAll(".bar")
+        .data(data)
+      .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", function(d) { return x(d.education); })
+        .attr("y", function(d) { return y(d.population); })
+        .attr("height", function(d) { return height - y(d.population); })
+        .attr("width", x.rangeBand());
+
+  });
+</script>
+</html>

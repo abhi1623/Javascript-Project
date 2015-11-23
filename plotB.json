@@ -1,0 +1,179 @@
+{
+    "grad_dist": [
+        {
+            "state": "JAMMU",
+            "male": 426555,
+            "female": 265929
+        },
+        {
+            "state": "HIMACHAL",
+            "male": 293449,
+            "female": 223652
+        },
+        {
+            "state": "PUNJAB",
+            "male": 960456,
+            "female": 959213
+        },
+        {
+            "state": "CHANDIGARH",
+            "male": 111494,
+            "female": 94542
+        },
+        {
+            "state": "UTTARAKHAND",
+            "male": 568963,
+            "female": 433434
+        },
+        {
+            "state": "HARYANA",
+            "male": 1183849,
+            "female": 810751
+        },
+        {
+            "state": "DELHI",
+            "male": 1636077,
+            "female": 1282115
+        },
+        {
+            "state": "RAJASTHAN",
+            "male": 2461922,
+            "female": 1064619
+        },
+        {
+            "state": "UTTAR",
+            "male": 7086446,
+            "female": 3811759
+        },
+        {
+            "state": "BIHAR",
+            "male": 2471458,
+            "female": 764190
+        },
+        {
+            "state": "SIKKIM",
+            "male": 24812,
+            "female": 18036
+        },
+        {
+            "state": "ARUNACHAL",
+            "male": 58823,
+            "female": 28114
+        },
+        {
+            "state": "NAGALAND",
+            "male": 96513,
+            "female": 68531
+        },
+        {
+            "state": "MANIPUR",
+            "male": 178447,
+            "female": 115688
+        },
+        {
+            "state": "MIZORAM",
+            "male": 56437,
+            "female": 38959
+        },
+        {
+            "state": "TRIPURA",
+            "male": 107556,
+            "female": 58240
+        },
+        {
+            "state": "MEGHALAYA",
+            "male": 77020,
+            "female": 77942
+        },
+        {
+            "state": "ASSAM",
+            "male": 718327,
+            "female": 411992
+        },
+        {
+            "state": "WEST",
+            "male": 3463977,
+            "female": 1891297
+        },
+        {
+            "state": "JHARKHAND",
+            "male": 1039975,
+            "female": 492195
+        },
+        {
+            "state": "ODISHA",
+            "male": 1303987,
+            "female": 661902
+        },
+        {
+            "state": "CHHATTISGARH",
+            "male": 799269,
+            "female": 417319
+        },
+        {
+            "state": "MADHYA",
+            "male": 2311433,
+            "female": 1279956
+        },
+        {
+            "state": "GUJARAT",
+            "male": 2083498,
+            "female": 1388297
+        },
+        {
+            "state": "DAMAN",
+            "male": 8774,
+            "female": 4575
+        },
+        {
+            "state": "DADRA",
+            "male": 13880,
+            "female": 7899
+        },
+        {
+            "state": "MAHARASHTRA",
+            "male": 5730823,
+            "female": 3774694
+        },
+        {
+            "state": "ANDHRA",
+            "male": 4125374,
+            "female": 2182506
+        },
+        {
+            "state": "KARNATAKA",
+            "male": 2799580,
+            "female": 1696871
+        },
+        {
+            "state": "GOA",
+            "male": 77010,
+            "female": 75121
+        },
+        {
+            "state": "LAKSHADWEEP",
+            "male": 2682,
+            "female": 1606
+        },
+        {
+            "state": "KERALA",
+            "male": 1187364,
+            "female": 1474710
+        },
+        {
+            "state": "TAMIL",
+            "male": 3495384,
+            "female": 2577695
+        },
+        {
+            "state": "PUDUCHERRY",
+            "male": 87072,
+            "female": 67712
+        },
+        {
+            "state": "ANDAMAN",
+            "male": 13832,
+            "female": 10748
+        }
+    ]
+}

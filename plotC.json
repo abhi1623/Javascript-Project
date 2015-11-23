@@ -1,0 +1,44 @@
+{
+    "Education": [
+        {
+            "education": "Without education",
+            "population": 42917688
+        },
+        {
+            "education": "Below Primary",
+            "population": 187922838
+        },
+        {
+            "education": "Primary",
+            "population": 230286790
+        },
+        {
+            "education": "Middle",
+            "population": 165085953
+        },
+        {
+            "education": "Matric/Secondary",
+            "population": 123969998
+        },
+        {
+            "education": "Higher secondary",
+            "population": 90159789
+        },
+        {
+            "education": "Nontechnical diploma",
+            "population": 1162928
+        },
+        {
+            "education": "Technical diploma",
+            "population": 8290083
+        },
+        {
+            "education": "Graduate & above",
+            "population": 75595327
+        },
+        {
+            "education": "Unclassified",
+            "population": 3772888
+        }
+    ]
+}
